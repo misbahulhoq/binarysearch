@@ -1,3 +1,4 @@
+import Courses from "@/components/home/Courses";
 import Searchbox from "@/components/SearchBox";
 import UnderDevelopmentGemini from "@/components/UnderDevGemini";
 
@@ -7,7 +8,8 @@ const Home = () => {
   return (
     <div>
       <Searchbox />
-      <UnderDevelopmentGemini />
+      {/* <UnderDevelopmentGemini /> */}
+      <Courses />
       {/* <UnderDevelopmentGPT /> */}
       {/* <UnderDevelopmentDeepSeek /> */}
       {/* <UnderDevelopmentPageClaude /> */}

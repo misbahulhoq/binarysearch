@@ -14,6 +14,9 @@ importers:
       algoliasearch:
         specifier: ^5.21.0
         version: 5.21.0
+      antd:
+        specifier: ^5.24.4
+        version: 5.24.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next:
         specifier: 15.2.2
         version: 15.2.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
