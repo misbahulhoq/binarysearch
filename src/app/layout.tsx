@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description: "A platform to learn coding for free.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
