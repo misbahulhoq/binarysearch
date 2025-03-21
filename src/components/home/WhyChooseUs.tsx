@@ -6,7 +6,7 @@ import FeatureCard from "./FeatureCard";
 
 const WhyChooseUs = () => {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.5 });
+  const isInView = useInView(sectionRef, { once: false, amount: 0.3 });
 
   const features = [
     {
