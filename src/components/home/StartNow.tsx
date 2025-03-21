@@ -1,0 +1,35 @@
+"use client";
+import { Button } from "antd";
+import { useInView, motion } from "framer-motion";
+import Link from "next/link";
+import React, { useRef } from "react";
+
+const StartNow = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.3, once: true });
+  return (
+    <div className="h-[500px] flex justify-center items-center">
+      <motion.div
+        className="container-center text-center"
+        ref={ref}
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      >
+        <h1 className="text-4xl lg:text-5xl font-bold mb-2">
+          আপনার জন্য শুভকামনা
+        </h1>
+        <p className="mb-3">
+          আপনার প্রোগ্রামিং শেখার যাত্রা শুভ হোক এই কামনা করছি
+        </p>
+
+        <Link href={`/`}>
+          <Button type="primary" size="large">
+            শেখা শুরু করুন
+          </Button>
+        </Link>
+      </motion.div>
+    </div>
+  );
+};
+
+export default StartNow;

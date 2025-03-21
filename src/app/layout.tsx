@@ -4,6 +4,7 @@ import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import "@ant-design/v5-patch-for-react-19";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

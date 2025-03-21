@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Book, Code, Languages } from "lucide-react";
+import { Book, CircleDollarSign, Code, Languages } from "lucide-react";
 import FeatureCard from "./FeatureCard";
 
 const WhyChooseUs = () => {
@@ -27,6 +27,12 @@ const WhyChooseUs = () => {
       icon: <Languages className="h-6 w-6" />,
       title: "বাংলা ভাষায়",
       description: `আমাদের এই কোর্সটি সম্পূর্ণ বাংলা ভাষায়, তাই আমরা আশা করছি এটি আপনার জন্য অনেক সহজ হবে`,
+    },
+    {
+      id: 4,
+      icon: <CircleDollarSign />,
+      title: "সম্পূর্ণ ফ্রি",
+      description: `আমাদের সাইটের কোর্সগুলো সম্পূর্ণ ফ্রি তে কমপ্লিট করতে পারবেন ।`,
     },
   ];
 
@@ -70,7 +76,7 @@ const WhyChooseUs = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-8"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -79,7 +85,7 @@ const WhyChooseUs = () => {
             <motion.div
               key={feature.id}
               variants={itemVariants}
-              className="flex justify-center h-full cursor-pointer"
+              className="flex justify-center cursor-pointer"
             >
               <FeatureCard props={feature} />
             </motion.div>

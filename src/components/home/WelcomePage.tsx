@@ -5,6 +5,7 @@ import WhyChooseUs from "./WhyChooseUs";
 import HeroSection from "./HeroSection";
 import ComingSoonSection from "./ComingSoonSection";
 import NewsLetter from "./NewsLetter";
+import StartNow from "./StartNow";
 
 const WelcomePage = () => {
   const [, setCurrentFeature] = useState(0);
@@ -37,6 +38,8 @@ const WelcomePage = () => {
             <NewsLetter />
             {/* Coming Soon Section */}
             <ComingSoonSection />
+
+            <StartNow />
           </div>
         </div>
       </div>

@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .container-center {
+    @apply w-11/12 max-w-[1536px] mx-auto;
+  }
+}

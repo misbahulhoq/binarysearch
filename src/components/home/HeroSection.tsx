@@ -2,6 +2,7 @@
 import React from "react";
 import { Terminal, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const HeroSection = () => {
   return (
     <section className="container min-h-screen mx-auto px-6 py-24 lg:py-0  flex flex-col md:flex-row items-center">
@@ -13,12 +14,12 @@ const HeroSection = () => {
       >
         <motion.h1 className="text-5xl font-bold mb-6">
           বাংলা ভাষায় <br />
-          <span className="text-yellow-400">জাভাস্ক্রিপ্ট</span> শিখুন
+          <span className="text-yellow-400">প্রোগ্রামিং</span> শিখুন
           <span className="relative">
             <span className="absolute bottom-2 left-0 w-full h-3 bg-indigo-600 z-0 opacity-50"></span>
           </span>
         </motion.h1>
-        <p className="text-xl mb-8">
+        <p className="text-xl mb-8 text-slate-300">
           আজ থেকেই আপনার কোডিং জার্নি শুরু করুন <br /> আমাদের ইন্টারেক্টিভ
           জাভাস্ক্রিপ্ট কোর্সের সাথে
         </p>
@@ -29,13 +30,19 @@ const HeroSection = () => {
 </div> */}
 
         <div className="flex space-x-4">
-          <button className="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-3 px-6 rounded-lg transition flex items-center">
-            Get Started
+          <Link
+            href={`/`}
+            className="bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold py-3 px-6 rounded-lg transition flex items-center"
+          >
+            যাত্রা শুরু করুন
             <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
-          <button className="border border-white hover:border-yellow-400 hover:text-yellow-400 py-3 px-6 rounded-lg transition">
+          </Link>
+          <Link
+            href={`/`}
+            className="border border-white hover:border-yellow-400 hover:text-yellow-400 py-3 px-6 rounded-lg transition"
+          >
             View Courses
-          </button>
+          </Link>
         </div>
       </motion.div>
 
