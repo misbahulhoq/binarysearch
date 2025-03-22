@@ -2,6 +2,7 @@
 
 import React from "react";
 import Logo from "../shared/Logo";
+import ThemeSwitcher from "../shared/ThemeSwitcher";
 
 const Header = () => {
   const [isClient, setIsClient] = React.useState(false);
@@ -42,6 +43,8 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+
+          <ThemeSwitcher />
         </header>
       </header>
     );

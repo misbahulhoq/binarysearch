@@ -5,6 +5,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import "@ant-design/v5-patch-for-react-19";
+import Provider from "./Provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +33,11 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AntdRegistry>
-          <Header />
-          {children}
-          <Footer />
+          <Provider>
+            <Header />
+            <div className="min-h-screen">{children}</div>
+            <Footer />{" "}
+          </Provider>
         </AntdRegistry>
       </body>
     </html>

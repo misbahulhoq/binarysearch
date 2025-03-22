@@ -22,7 +22,7 @@ const StartNow = () => {
           আপনার প্রোগ্রামিং শেখার যাত্রা শুভ হোক এই কামনা করছি
         </p>
 
-        <Link href={`/`}>
+        <Link href={`/javascript`}>
           <Button type="primary" size="large">
             শেখা শুরু করুন
           </Button>
