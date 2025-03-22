@@ -2,7 +2,7 @@
 import React from "react";
 import { useTheme } from "../Provider";
 
-const page = () => {
+const JavaScriptHome = () => {
   const { theme } = useTheme();
 
   return (
@@ -13,9 +13,9 @@ const page = () => {
       }}
       className="h-screen"
     >
-      page
+      JavaScriptHome
     </div>
   );
 };
 
-export default page;
+export default JavaScriptHome;
