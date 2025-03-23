@@ -8,14 +8,14 @@ const StartNow = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.3, once: true });
   return (
-    <div className="h-[500px] flex justify-center items-center">
+    <div className="flex h-[500px] items-center justify-center">
       <motion.div
         className="container-center text-center"
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       >
-        <h1 className="text-4xl lg:text-5xl font-bold mb-2">
+        <h1 className="mb-2 text-4xl font-bold lg:text-5xl">
           আপনার জন্য শুভকামনা
         </h1>
         <p className="mb-3">

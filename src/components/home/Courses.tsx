@@ -10,13 +10,13 @@ interface ContainerGridProps {
 
 const ContainerGrid: React.FC<ContainerGridProps> = ({ containers }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+    <div className="grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {containers.map((container, index) => (
         <div
           key={index}
-          className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-300"
+          className="rounded-lg bg-white p-4 shadow-md transition-shadow duration-300 hover:shadow-lg"
         >
-          <h2 className="text-lg font-semibold mb-2">{container.title}</h2>
+          <h2 className="mb-2 text-lg font-semibold">{container.title}</h2>
           {/* You can add more content here if needed */}
         </div>
       ))}

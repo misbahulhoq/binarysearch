@@ -26,14 +26,14 @@ const NewsLetter = () => {
 
   return (
     <motion.div
-      className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 z-[1]"
+      className="relative z-[1] h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
       {/* Cursor follow effect */}
       <motion.div
-        className="absolute rounded-full bg-violet-600 opacity-10 mix-blend-screen filter blur-xl"
+        className="absolute rounded-full bg-violet-600 opacity-10 mix-blend-screen blur-xl filter"
         animate={{
           x: mousePosition.x - 150,
           y: mousePosition.y - 150,
@@ -58,7 +58,7 @@ const NewsLetter = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       >
-        <h1 className="mb-6 text-5xl font-bold text-white  select-none">
+        <h1 className="mb-6 text-5xl font-bold text-white select-none">
           আমাদের <span className="text-blue-400"> নিউজলেটারে </span>সাবস্ক্রাইব
           করুন
         </h1>

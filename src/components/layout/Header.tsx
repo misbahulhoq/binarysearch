@@ -18,29 +18,29 @@ const Header = () => {
 
   if (isClient)
     return (
-      <header className="bg-gradient-to-br from-slate-900 to-indigo-900 text-white sticky top-0 z-10 ">
+      <header className="sticky top-0 z-10 bg-gradient-to-br from-slate-900 to-indigo-900 text-white">
         {/* Header */}
-        <header className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <header className="container mx-auto flex items-center justify-between px-6 py-4">
           <Logo />
           <nav className="hidden lg:block">
             <ul className="flex space-x-8">
               <li>
-                <a href="#" className="hover:text-yellow-400 transition">
+                <a href="#" className="transition hover:text-yellow-400">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition">
+                <a href="#" className="transition hover:text-yellow-400">
                   Courses
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition">
+                <a href="#" className="transition hover:text-yellow-400">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition">
+                <a href="#" className="transition hover:text-yellow-400">
                   Contact
                 </a>
               </li>

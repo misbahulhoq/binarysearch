@@ -63,20 +63,20 @@ const WhyChooseUs = () => {
     <section ref={sectionRef} className="">
       <div className="container mx-auto px-4">
         <motion.div
-          className="text-center mb-16"
+          className="mb-16 text-center"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="mb-4 text-4xl font-bold text-white">
             {" "}
             কেন আমাদের কোর্সটি নির্বাচন করবেন ?
           </h2>
-          <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <div className="mx-auto mb-6 h-1 w-24 bg-blue-500"></div>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4"
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -85,7 +85,7 @@ const WhyChooseUs = () => {
             <motion.div
               key={feature.id}
               variants={itemVariants}
-              className="flex justify-center cursor-pointer"
+              className="flex cursor-pointer justify-center"
             >
               <FeatureCard props={feature} />
             </motion.div>
@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
       {/* Animated background elements */}
       <div className="relative overflow-hidden">
         <motion.div
-          className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-blue-100 opacity-60 z-0"
+          className="absolute -bottom-20 -left-20 z-0 h-64 w-64 rounded-full bg-blue-100 opacity-60"
           animate={
             isInView
               ? { scale: [0.8, 1.1, 1], opacity: [0, 0.6, 0.5] }
@@ -105,7 +105,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 2, ease: "easeOut" }}
         />
         <motion.div
-          className="absolute -top-32 right-20 w-96 h-96 rounded-full bg-green-100 opacity-60 z-0"
+          className="absolute -top-32 right-20 z-0 h-96 w-96 rounded-full bg-green-100 opacity-60"
           animate={
             isInView
               ? { scale: [0.7, 1.05, 1], opacity: [0, 0.3, 0.3] }

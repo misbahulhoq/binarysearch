@@ -8,6 +8,6 @@ body {
 
 @layer utilities {
   .container-center {
-    @apply w-11/12 max-w-[1536px] mx-auto;
+    @apply mx-auto w-11/12 max-w-[1536px];
   }
 }
