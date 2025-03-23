@@ -9,7 +9,7 @@ const FeatureCard = ({ props }: { props: Props }) => {
   const { icon, title, description } = props;
   return (
     <div className="flex items-center justify-center p-8 ">
-      <div className="group h-[200px] max-w-72 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-0.5 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <div className="group max-w-80 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 p-0.5 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
         <div className="bg-gray-900 rounded-lg p-6 h-full flex flex-col overflow-hidden">
           <div className="flex items-center mb-4">
             <div className="h-12 w-12 rounded-full bg-indigo-600 flex items-center justify-center">
