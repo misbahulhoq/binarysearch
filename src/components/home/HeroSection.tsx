@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 const HeroSection = () => {
   return (
-    <section className="container min-h-screen mx-auto px-6 py-24 lg:py-0  flex flex-col md:flex-row items-center">
+    <section className="container lg:min-h-screen mx-auto px-6 py-24 lg:py-0 flex flex-col lg:flex-row items-center gap-10 overflow-hidden">
       <motion.div
-        className="md:w-1/2"
+        className="lg:w-1/2"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -37,22 +37,22 @@ const HeroSection = () => {
             যাত্রা শুরু করুন
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-          <Link
+          {/* <Link
             href={`/`}
             className="border border-white hover:border-yellow-400 hover:text-yellow-400 py-3 px-6 rounded-lg transition"
           >
             View Courses
-          </Link>
+          </Link> */}
         </div>
       </motion.div>
 
       <motion.div
-        className="md:w-1/2 mt-12 md:mt-0 flex justify-center"
+        className="lg:w-1/2 mt-12 md:mt-0 flex justify-center"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.8 }}
       >
-        <div className="relative ">
+        <div className="relative">
           <div className="bg-slate-800 rounded-lg p-6 shadow-xl w-full max-w-md border border-slate-700">
             <div className="flex items-center mb-4">
               <div className="flex space-x-2 mr-4">
