@@ -11,7 +11,7 @@ export const lightTheme: ThemeConfig = {
 export const darkTheme: ThemeConfig = {
   token: {
     colorPrimary: "#177ddc", // Primary color for dark mode
-    colorBgBase: "#2a2a2a", // Background color
+    colorBgBase: "#021526", // Background color
     colorTextBase: "#ffffff", // Text color
   },
 };

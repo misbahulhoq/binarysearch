@@ -3,9 +3,12 @@
 import React from "react";
 import Logo from "../shared/Logo";
 import ThemeSwitcher from "../shared/ThemeSwitcher";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isClient, setIsClient] = React.useState(false);
+  const pathName = usePathname();
+  console.log(pathName);
 
   React.useEffect(() => {
     setIsClient(true);
@@ -15,7 +18,7 @@ const Header = () => {
 
   if (isClient)
     return (
-      <header className="bg-gradient-to-br from-slate-900 to-indigo-900 text-white">
+      <header className="bg-gradient-to-br from-slate-900 to-indigo-900 text-white sticky top-0 z-10 ">
         {/* Header */}
         <header className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Logo />
@@ -44,7 +47,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <ThemeSwitcher />
+          {pathName !== "/" && <ThemeSwitcher />}
         </header>
       </header>
     );

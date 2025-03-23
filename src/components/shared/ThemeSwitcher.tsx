@@ -9,9 +9,9 @@ const ThemeSwitcher = () => {
     <Button
       onClick={toggleTheme}
       icon={isDarkMode ? <SunOutlined /> : <MoonOutlined />}
-    >
-      {isDarkMode ? "Light Mode" : "Dark Mode"}
-    </Button>
+      size="large"
+      shape="circle"
+    ></Button>
   );
 };
 

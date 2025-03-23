@@ -26,7 +26,7 @@ const NewsLetter = () => {
 
   return (
     <motion.div
-      className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800"
+      className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 z-[1]"
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
