@@ -14,7 +14,7 @@ const Header = () => {
     setIsClient(true);
   }, []);
 
-  if (!isClient) return null;
+  if (!isClient) return <div className="py-5"></div>;
 
   if (isClient)
     return (

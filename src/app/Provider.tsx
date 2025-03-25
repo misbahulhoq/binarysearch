@@ -13,7 +13,11 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 unstableSetRender((node, container) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   container._reactRoot ||= createRoot(container);
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const root = container._reactRoot;
   root.render(node);
   return async () => {

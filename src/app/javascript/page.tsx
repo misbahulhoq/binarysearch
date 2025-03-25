@@ -1,20 +1,21 @@
 "use client";
 import React from "react";
 import { useTheme } from "../Provider";
+import { jsCourses } from "@/data/javascript";
 
 const JavaScriptHome = () => {
   const { theme } = useTheme();
 
   return (
-    <div
+    <section
       style={{
-        background: theme.token.colorBgBase,
-        color: theme.token.colorTextBase,
+        background: theme?.token?.colorBgBase,
+        color: theme?.token?.colorTextBase,
       }}
-      className="h-screen"
+      className="min-h-screen py-4"
     >
-      JavaScriptHome
-    </div>
+      <div className="container-center"></div>
+    </section>
   );
 };
 
