@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const [isClient, setIsClient] = React.useState(false);
   const pathName = usePathname();
-  console.log(pathName);
 
   React.useEffect(() => {
     setIsClient(true);

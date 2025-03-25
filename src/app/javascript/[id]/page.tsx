@@ -5,6 +5,7 @@ import Link from "next/link";
 // import { useState } from "react";
 import { readFile } from "@/utils/readFile";
 import "../../tutorials.css";
+
 // export async function generateStaticParams() {
 //   return lessons.map((lesson) => ({ id: lesson.id }));
 // }
@@ -25,23 +26,19 @@ export default function LessonPage({
   //     console.log(lesson);
   //     console.log(id);
   //   });
+  params.then((p) => console.log(p.id));
 
   const lesson = lessons.find((l) => {
     return params.then((p) => l.id === p.id);
   });
   console.log(lesson);
   if (!lesson) return <h1>Lesson Not Found</h1>;
-
-  //   return null;
-
   const source = readFile(lesson);
-  console.log(source);
-
   const { content } = matter(source);
   console.log(content);
-  //   return null;
+
   return (
-    <div className="tutorial mx-auto max-w-3xl p-6">
+    <div className="tutorial container-center mx-auto max-w-3xl">
       <h1 className="mb-4 text-3xl font-bold">{lesson.title}</h1>
       <MDXRemote source={source} />
 
@@ -49,7 +46,7 @@ export default function LessonPage({
       <div className="mt-8 flex justify-between">
         {lesson.previous && (
           <Link
-            href={`/lesson/${lesson.previous}`}
+            href={`/javascript/${lesson.previous}`}
             className="rounded bg-gray-200 px-4 py-2 hover:bg-gray-300"
           >
             ← Previous
@@ -57,7 +54,7 @@ export default function LessonPage({
         )}
         {lesson.next && (
           <Link
-            href={`/lesson/${lesson.next}`}
+            href={`/javascript/${lesson.next}`}
             className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
           >
             Next →
