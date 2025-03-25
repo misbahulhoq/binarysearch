@@ -1,0 +1,42 @@
+.tutorial code {
+  background-color: #282c34;
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.tutorial pre {
+  background-color: #282c34;
+  color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.tutorial pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.95em;
+  color: inherit;
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+/* Optional: Light syntax highlighting */
+.tutorial pre code .keyword {
+  font-weight: bold;
+}
+
+.tutorial pre code .string {
+  font-style: italic;
+}
+
+.tutorial pre code .comment {
+  opacity: 0.7;
+}

@@ -4,7 +4,7 @@ import { jsCourses as lessons } from "@/data/javascript";
 import Link from "next/link";
 // import { useState } from "react";
 import { readFile } from "@/utils/readFile";
-
+import "../../tutorials.css";
 // export async function generateStaticParams() {
 //   return lessons.map((lesson) => ({ id: lesson.id }));
 // }
@@ -32,15 +32,18 @@ export default function LessonPage({
   console.log(lesson);
   if (!lesson) return <h1>Lesson Not Found</h1>;
 
-  return null;
+  //   return null;
 
   const source = readFile(lesson);
-  const { content } = matter(source);
+  console.log(source);
 
+  const { content } = matter(source);
+  console.log(content);
+  //   return null;
   return (
-    <div className="mx-auto max-w-3xl p-6">
+    <div className="tutorial mx-auto max-w-3xl p-6">
       <h1 className="mb-4 text-3xl font-bold">{lesson.title}</h1>
-      <MDXRemote source={content} />
+      <MDXRemote source={source} />
 
       {/* Navigation Buttons */}
       <div className="mt-8 flex justify-between">
