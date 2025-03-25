@@ -9,7 +9,7 @@ const JavascriptPageLayout = ({ children }: { children: ReactNode }) => {
         background: theme?.token?.colorBgBase,
         color: theme?.token?.colorTextBase,
       }}
-      className="min-h-screen"
+      className="min-h-screen py-6 md:py-7"
     >
       {children}
     </section>

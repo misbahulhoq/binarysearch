@@ -11,6 +11,9 @@ body {
   code {
     @apply font-[inherit];
   }
+  button {
+    @apply font-[inherit]!;
+  }
 }
 
 @layer utilities {
