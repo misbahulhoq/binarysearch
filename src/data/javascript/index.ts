@@ -4,7 +4,7 @@ export const jsCourses = [
     title: "Introduction to JavaScript",
     content: "intro-js.mdx",
     next: "variables",
-    previous: null,
+    previous: "/",
   },
   {
     id: "variables",
