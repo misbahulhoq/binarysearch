@@ -2,13 +2,8 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { jsCourses as lessons } from "@/data/javascript";
 import Link from "next/link";
-// import { useState } from "react";
 import { readFile } from "@/utils/readFile";
 import "../../tutorials.css";
-
-// export async function generateStaticParams() {
-//   return lessons.map((lesson) => ({ id: lesson.id }));
-// }
 
 export default async function LessonPage({
   params,
@@ -24,7 +19,7 @@ export default async function LessonPage({
 
   return (
     <div className="tutorial container-center mx-auto max-w-3xl">
-      <h1 className="mb-4 text-3xl font-bold">{lesson.title}</h1>
+      {/* <h1 className="mb-4 text-3xl font-bold">{lesson.title}</h1> */}
       <MDXRemote source={content} />
 
       {/* Navigation Buttons */}
@@ -32,7 +27,7 @@ export default async function LessonPage({
         {lesson.previous && (
           <Link
             href={`/javascript/${lesson.previous}`}
-            className="rounded bg-gray-200 px-4 py-2 hover:bg-gray-300"
+            className="rounded bg-gray-200 px-4 py-2 text-black hover:bg-gray-300"
           >
             ← Previous
           </Link>
