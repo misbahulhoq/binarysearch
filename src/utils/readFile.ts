@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
 
-export const readFile = (lesson: any) => {
+type lesson = {
+  content: string;
+};
+export const readFile = (lesson: lesson) => {
   const contentPath = path.join(
     process.cwd(),
     "src",
