@@ -1,15 +1,11 @@
-import UnderDevelopmentGemini from "@/components/UnderDevGemini";
+import WelcomePage from "@/components/home/WelcomePage";
 
 import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <UnderDevelopmentGemini />
-      {/* <UnderDevelopmentGPT /> */}
-      {/* <UnderDevelopmentDeepSeek /> */}
-      {/* <UnderDevelopmentPageClaude /> */}
-      {/* <UnderDevelopmentPageClaudeV2 /> */}
+    <div className="min-h-screen">
+      <WelcomePage />
     </div>
   );
 };

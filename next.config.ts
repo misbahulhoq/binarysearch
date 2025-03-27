@@ -1,9 +1,7 @@
-// import type { NextConfig } from "next";
-import nextra from "nextra";
-const withNextra = nextra({
-  // ... Other Nextra config options
-});
+import { NextConfig } from "next";
 
-export default withNextra({
-  // ... Other Next.js config options
-});
+const nextConfig: NextConfig = {
+  transpilePackages: ["next-mdx-remote"],
+};
+
+export default nextConfig;

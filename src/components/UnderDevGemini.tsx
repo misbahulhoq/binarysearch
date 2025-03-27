@@ -2,18 +2,18 @@ import React from "react";
 
 const UnderDevelopmentGemini = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+        <h1 className="mb-4 text-4xl font-bold text-gray-800">
           Under Construction
         </h1>
-        <p className="text-lg text-gray-600 mb-8">
+        <p className="mb-8 text-lg text-gray-600">
           We&apos;re working hard to bring you something amazing. Stay tuned!
         </p>
-        <div className="animate-pulse flex space-x-4 justify-center mb-8">
-          <div className="w-8 h-8 bg-blue-500 rounded-full"></div>
-          <div className="w-8 h-8 bg-green-500 rounded-full"></div>
-          <div className="w-8 h-8 bg-yellow-500 rounded-full"></div>
+        <div className="mb-8 flex animate-pulse justify-center space-x-4">
+          <div className="h-8 w-8 rounded-full bg-blue-500"></div>
+          <div className="h-8 w-8 rounded-full bg-green-500"></div>
+          <div className="h-8 w-8 rounded-full bg-yellow-500"></div>
         </div>
         <p className="text-sm text-gray-500">
           We expect to be live soon. Please check back later.
