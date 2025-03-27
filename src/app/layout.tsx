@@ -29,6 +29,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" href="/icon.svg" type="image/svg" sizes="50x32" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
