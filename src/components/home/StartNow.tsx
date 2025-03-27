@@ -14,6 +14,7 @@ const StartNow = () => {
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <h1 className="mb-2 text-4xl font-bold lg:text-5xl">
           আপনার জন্য শুভকামনা

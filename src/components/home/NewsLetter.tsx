@@ -9,6 +9,7 @@ const NewsLetter = () => {
   const [isHovering, setIsHovering] = useState(false);
   const isInView = useInView(ref, {
     amount: 0.35,
+    once: true,
   });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>): void => {
@@ -55,8 +56,8 @@ const NewsLetter = () => {
         ref={ref}
         className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center"
         initial={{ y: 50, opacity: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <h1 className="mb-6 text-5xl font-bold text-white select-none">
           আমাদের <span className="text-blue-400"> নিউজলেটারে </span>সাবস্ক্রাইব
