@@ -7,6 +7,7 @@ import Editor from "react-simple-code-editor";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
+import RunButton from "@/components/shared/RunButton";
 
 const JavaScriptHome = () => {
   const [code, setCode] = useState(`console.log("Hello, JavaScript!");`);
@@ -40,6 +41,7 @@ const JavaScriptHome = () => {
               fontSize: 16,
             }}
           />
+          <RunButton onClick={() => eval(code)} />
         </div>
 
         <div className="mt-8">
