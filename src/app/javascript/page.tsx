@@ -1,8 +1,15 @@
+"use client";
 import { Button } from "antd";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { highlight, languages } from "prismjs/components/prism-core";
+import Editor from "react-simple-code-editor";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+import "prismjs/themes/prism.css";
 
 const JavaScriptHome = () => {
+  const [code, setCode] = useState(`console.log("Hello, JavaScript!");`);
   return (
     <section className="">
       <div className="container-center">
@@ -23,11 +30,16 @@ const JavaScriptHome = () => {
 
         <div className="mt-8">
           <h2 className="mb-4 text-3xl font-bold">উদাহরণ</h2>
-          <p className="text-xl">
-            আমাদের এখান থেকে জাভাস্ক্রিপ্ট শেখার জন্য আপনার কোন পূর্ব অভিজ্ঞতা
-            প্রয়োজন নেই । শুধু শেখার আগ্রহ থাকলেই আমাদের এখান থেকে আপনি
-            জাভাস্ক্রিপ্ট শিখতে পারবেন ।
-          </p>
+
+          <Editor
+            value={code}
+            onValueChange={(code) => setCode(code)}
+            highlight={(code) => highlight(code, languages.js)}
+            padding={10}
+            style={{
+              fontSize: 16,
+            }}
+          />
         </div>
 
         <div className="mt-8">
