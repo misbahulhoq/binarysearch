@@ -10,37 +10,22 @@ import "../../tutorials.css";
 //   return lessons.map((lesson) => ({ id: lesson.id }));
 // }
 
-export default function LessonPage({
+export default async function LessonPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
-  //   const lesson = lessons.find((l) => {
-  //     params.then((p) => l.id === p);
-  //   });
-  //   const [lesson, setLesson] = useState(null);
-  //   params.then((id) => {
-  //     // setLesson(lessons.find((l) => l.id === id));
-  //     lesson = lessons.find((l) => l.id === id.id);
-  //     console.log(lessons.find((l) => l.id === id.id));
-  //     console.log(lesson);
-  //     console.log(id);
-  //   });
-  params.then((p) => console.log(p.id));
+  const id = (await params).id;
+  const lesson = lessons.find((lessons) => lessons.id === id);
 
-  const lesson = lessons.find((l) => {
-    return params.then((p) => l.id === p.id);
-  });
-  console.log(lesson);
   if (!lesson) return <h1>Lesson Not Found</h1>;
   const source = readFile(lesson);
   const { content } = matter(source);
-  console.log(content);
 
   return (
     <div className="tutorial container-center mx-auto max-w-3xl">
       <h1 className="mb-4 text-3xl font-bold">{lesson.title}</h1>
-      <MDXRemote source={source} />
+      <MDXRemote source={content} />
 
       {/* Navigation Buttons */}
       <div className="mt-8 flex justify-between">
