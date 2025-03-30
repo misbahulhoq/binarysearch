@@ -1,16 +1,10 @@
 "use client";
 import { Button } from "antd";
 import Link from "next/link";
-import React, { useState } from "react";
-import { highlight, languages } from "prismjs/components/prism-core";
-import Editor from "react-simple-code-editor";
-import "prismjs/components/prism-clike";
-import "prismjs/components/prism-javascript";
-import "prismjs/themes/prism.css";
-import RunButton from "@/components/shared/RunButton";
+import React from "react";
+import CodeExecutor from "@/components/javascript/CodeExecutor";
 
 const JavaScriptHome = () => {
-  const [code, setCode] = useState(`console.log("Hello, JavaScript!");`);
   return (
     <section className="">
       <div className="container-center">
@@ -32,16 +26,7 @@ const JavaScriptHome = () => {
         <div className="mt-8">
           <h2 className="mb-4 text-3xl font-bold">উদাহরণ</h2>
 
-          <Editor
-            value={code}
-            onValueChange={(code) => setCode(code)}
-            highlight={(code) => highlight(code, languages.js)}
-            padding={10}
-            style={{
-              fontSize: 16,
-            }}
-          />
-          <RunButton onClick={() => eval(code)} />
+          <CodeExecutor code="console.log('Hello, JavaScript!');" />
         </div>
 
         <div className="mt-8">
