@@ -13,6 +13,7 @@ interface ThemeContextType {
 interface SidebarContextType {
   isSidebarOpen: boolean;
   toggleSidebar: () => void;
+  closeSidebar: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -38,9 +39,17 @@ export const useTheme = () => {
   return context;
 };
 
+export const useSidebar = () => {
+  const context = useContext(SidebarContext);
+  if (!context)
+    throw new Error("useSidebar must be used within SidebarProvider");
+  return context;
+};
+
 const Provider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   const toggleTheme = () => {
     const newTheme = !isDarkMode;
     setIsDarkMode(newTheme);
@@ -49,6 +58,10 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
   };
 
   useEffect(() => {
@@ -63,7 +76,7 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
 
     const handleResize = () => {
       const newWidth = window.innerWidth;
-      setIsSidebarOpen(newWidth >= 768);
+      setIsSidebarOpen(newWidth >= 1024);
     };
     window.addEventListener("resize", handleResize);
 
@@ -80,7 +93,7 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
       }}
     >
       <SidebarContext.Provider
-        value={{ isSidebarOpen: false, toggleSidebar: () => {} }}
+        value={{ isSidebarOpen, toggleSidebar, closeSidebar }}
       >
         <ConfigProvider theme={isDarkMode ? darkTheme : lightTheme}>
           <div className={`${isDarkMode ? "" : ""}`}>{children}</div>

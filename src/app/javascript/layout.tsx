@@ -2,9 +2,15 @@
 import React, { ReactNode } from "react";
 import { useTheme } from "../Provider";
 import Sidebar from "@/components/layout/Sidebar";
+import { jsCourses } from "@/data/javascript";
 
 const JavascriptPageLayout = ({ children }: { children: ReactNode }) => {
   const { theme } = useTheme();
+  const links = jsCourses.map((lesson) => ({
+    title: lesson.title,
+    path: `/javascript/${lesson.id}`,
+  }));
+
   return (
     <section
       style={{
@@ -13,17 +19,8 @@ const JavascriptPageLayout = ({ children }: { children: ReactNode }) => {
       }}
       className="flex min-h-screen py-6 md:py-7"
     >
-      <div className="relative -left-64 w-[150px]">
-        <Sidebar
-          isSidebarOpen={true}
-          toggleSidebar={() => {}}
-          links={[
-            { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Contact", path: "/contact" },
-          ]}
-        />
-      </div>
+      <Sidebar links={links} />
+
       <div className="grow">{children}</div>
     </section>
   );
