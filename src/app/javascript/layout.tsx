@@ -1,6 +1,8 @@
 "use client";
 import React, { ReactNode } from "react";
 import { useTheme } from "../Provider";
+import Sidebar from "@/components/layout/Sidebar";
+
 const JavascriptPageLayout = ({ children }: { children: ReactNode }) => {
   const { theme } = useTheme();
   return (
@@ -9,9 +11,20 @@ const JavascriptPageLayout = ({ children }: { children: ReactNode }) => {
         background: theme?.token?.colorBgBase,
         color: theme?.token?.colorTextBase,
       }}
-      className="min-h-screen py-6 md:py-7"
+      className="flex min-h-screen py-6 md:py-7"
     >
-      {children}
+      <div className="relative -left-64 w-[150px]">
+        <Sidebar
+          isSidebarOpen={true}
+          toggleSidebar={() => {}}
+          links={[
+            { name: "Home", path: "/" },
+            { name: "About", path: "/about" },
+            { name: "Contact", path: "/contact" },
+          ]}
+        />
+      </div>
+      <div className="grow">{children}</div>
     </section>
   );
 };

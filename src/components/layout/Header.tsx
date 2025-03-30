@@ -4,6 +4,7 @@ import React from "react";
 import Logo from "../shared/Logo";
 import ThemeSwitcher from "../shared/ThemeSwitcher";
 import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   const [isClient, setIsClient] = React.useState(false);
@@ -20,7 +21,12 @@ const Header = () => {
       <header className="sticky top-0 z-10 bg-gradient-to-br from-slate-900 to-indigo-900 text-white">
         {/* Header */}
         <header className="container mx-auto flex items-center justify-between px-6 py-4">
-          <Logo />
+          <div className="flex items-center gap-5">
+            <button className="lg:hidden">
+              <Menu size={30} />
+            </button>
+            <Logo />
+          </div>
           <nav className="hidden lg:block">
             <ul className="flex space-x-8">
               <li>
