@@ -45,12 +45,18 @@
 }
 
 .tutorial pre {
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: oklch(0.279 0.041 260.031);
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   padding: 1rem;
   margin: 1rem 0;
   overflow-x: auto;
+}
+
+.tutorial pre::selection {
+  background-color: #3498db;
+  color: #fff;
 }
 
 .tutorial code {
