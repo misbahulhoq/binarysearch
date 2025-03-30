@@ -9,7 +9,7 @@ const ComingSoonSection = () => {
     once: true,
   });
   return (
-    <section className="rounded-xl bg-gradient-to-r from-indigo-800 to-purple-800 p-8 px-6 py-20 text-center">
+    <section className="flex h-[700px] items-center justify-center rounded-xl bg-gradient-to-r from-indigo-800 to-purple-800 px-6 text-center">
       <motion.div
         ref={ref}
         className=""

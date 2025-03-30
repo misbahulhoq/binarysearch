@@ -8,7 +8,7 @@ const StartNow = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { amount: 0.3, once: true });
   return (
-    <div className="flex h-[500px] items-center justify-center">
+    <div className="flex h-[600px] items-center justify-center">
       <motion.div
         className="container-center text-center"
         ref={ref}
