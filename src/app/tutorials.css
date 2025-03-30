@@ -1,42 +1,82 @@
-.tutorial code {
-  background-color: #282c34;
-  font-size: 0.9em;
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
-  border: 1px solid #e0e0e0;
+.tutorial {
+  line-height: 1.6;
 }
 
-.tutorial pre {
-  background-color: #282c34;
-  color: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  padding: 15px;
-  margin-bottom: 20px;
-  overflow-x: auto;
-  line-height: 1.5;
-}
-
-.tutorial pre code {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  font-size: 0.95em;
-  color: inherit;
-  white-space: pre;
-  word-break: normal;
-  word-wrap: normal;
-}
-
-/* Optional: Light syntax highlighting */
-.tutorial pre code .keyword {
+.tutorial h1 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 30px;
   font-weight: bold;
 }
 
-.tutorial pre code .string {
-  font-style: italic;
+.tutorial h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3498db;
+  padding-left: 0.75rem;
+  font-size: 24px;
+  font-weight: 600;
 }
 
-.tutorial pre code .comment {
-  opacity: 0.7;
+.tutorial p {
+  margin-bottom: 1rem;
+  max-width: 65ch;
+  font-size: 18px;
+  opacity: 0.85;
+}
+
+.tutorial ul {
+  border-left: 4px solid #3498db;
+  padding: 1rem 1rem 1rem 2rem;
+  margin: 1rem 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.tutorial li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-size: 17px;
+  opacity: 0.85;
+}
+
+.tutorial li strong {
+  color: #2980b9;
+}
+
+.tutorial pre {
+  /* background-color: #333; */
+  background-color: oklch(0.279 0.041 260.031);
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.tutorial pre::selection {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.tutorial code {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.tutorial a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .tutorial .flex {
+    flex-direction: column;
+  }
+
+  .tutorial .flex a {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
 }
