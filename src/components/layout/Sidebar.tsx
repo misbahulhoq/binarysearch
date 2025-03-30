@@ -2,13 +2,28 @@
 
 import { useSidebar } from "@/app/Provider";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface SidebarProps {
   links: { title: string; path: string }[];
 }
 const Sidebar = ({ links }: SidebarProps) => {
   const { isSidebarOpen, closeSidebar } = useSidebar();
+  const [deviceWidth, setWidth] = useState<null | number>(null);
+  useEffect(() => {
+    const deviceWidth = window.innerWidth;
+    setWidth(deviceWidth);
+
+    const handleResize = () => {
+      const newWidth = window.innerWidth;
+      setWidth(newWidth);
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="lg:mr-[180px]">
@@ -23,8 +38,12 @@ const Sidebar = ({ links }: SidebarProps) => {
               <li key={index}>
                 <Link
                   href={link.path}
-                  className="block py-2 text-sm font-medium"
-                  onClick={closeSidebar}
+                  className={`block py-2 text-sm font-medium`}
+                  onClick={() => {
+                    if (deviceWidth !== null && deviceWidth < 1024) {
+                      closeSidebar();
+                    }
+                  }}
                 >
                   {link.title}
                 </Link>

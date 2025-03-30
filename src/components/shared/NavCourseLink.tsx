@@ -11,10 +11,11 @@ interface Props {
 const NavCourseLink = ({ props }: { props: Props }) => {
   const { href, children } = props;
   const pathName = usePathname();
+  console.log(pathName);
   return (
     <Link
       href={href}
-      className={`flex h-full items-center px-2 ${pathName === href ? "bg-blue-500" : ""}`}
+      className={`flex h-full items-center px-2 ${pathName === href || pathName.includes(href) ? "bg-blue-500" : ""}`}
     >
       {children}
     </Link>

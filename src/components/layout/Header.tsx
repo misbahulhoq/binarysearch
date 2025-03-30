@@ -5,7 +5,6 @@ import Logo from "../shared/Logo";
 import ThemeSwitcher from "../shared/ThemeSwitcher";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
-import Link from "next/link";
 import { useSidebar } from "@/app/Provider";
 import { CloseOutlined } from "@ant-design/icons";
 import NavCourseLink from "../shared/NavCourseLink";
