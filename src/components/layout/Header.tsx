@@ -4,15 +4,27 @@ import React from "react";
 import Logo from "../shared/Logo";
 import ThemeSwitcher from "../shared/ThemeSwitcher";
 import { usePathname } from "next/navigation";
-import { Cross, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useSidebar } from "@/app/Provider";
 import { CloseOutlined } from "@ant-design/icons";
+import NavCourseLink from "../shared/NavCourseLink";
 
+const courses = [
+  {
+    children: "JavaScript",
+    href: "/javascript",
+  },
+  {
+    children: "Python",
+    href: "/python",
+  },
+];
 const Header = () => {
   const [isClient, setIsClient] = React.useState(false);
   const pathName = usePathname();
   const { toggleSidebar, isSidebarOpen } = useSidebar();
+
   React.useEffect(() => {
     setIsClient(true);
   }, []);
@@ -61,7 +73,7 @@ const Header = () => {
 
           {/* Header End */}
         </header>
-        <div className="bg-slate-900 py-2 text-white">
+        <div className="flex h-10 bg-slate-900 text-white">
           <div className="container-center flex items-center gap-4">
             {pathName !== "/" && (
               <button
@@ -76,7 +88,11 @@ const Header = () => {
               </button>
             )}
 
-            <Link href="/javascript">JavaScript</Link>
+            {courses.map((course) => (
+              <NavCourseLink key={course.href} props={course}>
+                {}
+              </NavCourseLink>
+            ))}
           </div>
         </div>
       </div>
