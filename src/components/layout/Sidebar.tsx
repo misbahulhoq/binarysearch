@@ -13,7 +13,7 @@ const Sidebar = ({ links }: SidebarProps) => {
   return (
     <div className="lg:mr-[180px]">
       <div
-        className={`fixed top-[102px] z-10 w-[180px] bg-gray-800 text-white shadow-lg transition-transform duration-300 lg:top-[112px] ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-[96px] z-10 w-[180px] bg-gray-800 text-white shadow-lg transition-transform duration-300 lg:top-[112px] ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
       >
         <aside
           className={`h-screen overflow-y-auto transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
