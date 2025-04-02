@@ -20,13 +20,25 @@ export const jsCourses: Course[] = [
     id: "variables",
     title: "জাভাস্ক্রিপ্ট চলক(variables) ",
     content: "variables.mdx",
-    next: "functions",
+    // code: ``,
+    next: "data-types",
     previous: "intro-js",
   },
   {
-    id: "functions",
+    id: "data-types",
     title: "জাভাস্ক্রিপ্ট ডাটা টাইপ",
-    content: "functions.mdx",
+    content: "data-types.mdx",
+    code: `
+let name = "binarySearch"; // String
+let age = 1; // Number
+let isFree = true; // Boolean
+let address; // Undefined
+let salary = null; // Null
+let uniqueId = Symbol("id"); // Symbol
+let bigNumber = 9007199254740991n; // BigInt
+
+// print all the vaules using console.log(). That's your task now.
+    `,
     next: null,
     previous: "variables",
   },

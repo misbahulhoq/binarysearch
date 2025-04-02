@@ -2,6 +2,10 @@
   line-height: 1.6;
 }
 
+.tutorial .language-javascript {
+  font-family: inherit !important;
+}
+
 .tutorial h1 {
   border-bottom: 2px solid #3498db;
   padding-bottom: 0.5rem;
@@ -16,6 +20,15 @@
   border-left: 4px solid #3498db;
   padding-left: 0.75rem;
   font-size: 24px;
+  font-weight: 600;
+}
+
+.tutorial h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #3498db;
+  padding-left: 0.75rem;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -45,7 +58,6 @@
 }
 
 .tutorial pre {
-  /* background-color: #333; */
   background-color: oklch(0.279 0.041 260.031);
   border: 1px solid #e0e0e0;
   border-radius: 4px;
@@ -61,7 +73,13 @@
 
 .tutorial code {
   font-size: 0.9rem;
-  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.tutorial .language-javascript {
+  color: #fff !important;
+  background-color: oklch(0.279 0.041 260.031);
 }
 
 .tutorial a {
