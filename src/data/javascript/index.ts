@@ -29,31 +29,43 @@ export const jsCourses: Course[] = [
     title: "জাভাস্ক্রিপ্ট ডাটা টাইপ",
     content: "data-types.mdx",
     code: `
-let name = "binarySearch"; // String
-let age = 1; // Number
-let isFree = true; // Boolean
-let address; // Undefined
-let salary = null; // Null
-let uniqueId = Symbol("id"); // Symbol
-let bigNumber = 9007199254740991n; // BigInt
+      // Primitive data types. 
+      let name = "binarySearch"; // String
+      let age = 1; // Number
+      let isFree = true; // Boolean
+      let address; // Undefined
+      let salary = null; // Null
+      let uniqueId = Symbol("id"); // Symbol
+      let bigNumber = 9007199254740991n; // BigInt
 
-// print all the vaules using console.log(). That's your task now.
+      // Non-primitive data types.
+      let object = {
+        name: "binarySearch",
+        age: 1,
+        isFree: true,
+        address: undefined,
+        salary: null,
+        uniqueId: Symbol("id"),
+        bigNumber: 9007199254740991n,
+      };
+
+      // print all the vaules using console.log(). That's your task now.
     `,
-    next: null,
+    next: "operators",
     previous: "variables",
   },
   {
-    id: "functions",
+    id: "operators",
     title: "জাভাস্ক্রিপ্ট অপারেটর",
-    content: "functions.mdx",
-    next: null,
-    previous: "variables",
+    content: "operators.mdx",
+    next: "comments",
+    previous: "data-types",
   },
 
   {
-    id: "functions",
+    id: "comments",
     title: "জাভাস্ক্রিপ্ট মন্তব্য (Comments)",
-    content: "functions.mdx",
+    content: "comments.mdx",
     next: null,
     previous: "variables",
   },
