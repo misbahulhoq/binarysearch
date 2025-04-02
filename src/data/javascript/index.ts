@@ -72,11 +72,11 @@ console.log(a % b); // Output: 0
     id: "comments",
     title: "জাভাস্ক্রিপ্ট মন্তব্য (Comments)",
     content: "comments.mdx",
-    next: null,
+    next: "conditions",
     previous: "variables",
   },
   {
-    id: "functions",
+    id: "conditions",
     title: "জাভাস্ক্রিপ্ট কন্ডিশন",
     content: "functions.mdx",
     next: null,
