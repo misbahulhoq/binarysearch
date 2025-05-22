@@ -56,7 +56,7 @@ const JavaScriptHome = () => {
         </div>
 
         <div className="mt-7 flex justify-end">
-          <Link href={`/javascript/intro-js`}>
+          <Link href={`/javascript/variables`}>
             <Button type="primary" size="large" className="outline-none">
               Next →
             </Button>

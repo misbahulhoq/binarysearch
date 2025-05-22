@@ -8,26 +8,26 @@ type Course = {
 };
 
 export const jsCourses: Course[] = [
-  {
-    id: "intro-js",
-    title: "জাভাস্ক্রিপ্ট সূচনা ",
-    content: "intro-js.mdx",
-    code: `console.log("I am starting to learn JavaScript.");`,
-    next: "variables",
-    previous: "/",
-  },
+  // {
+  //   id: "intro-js",
+  //   title: "জাভাস্ক্রিপ্ট সূচনা ",
+  //   content: "intro-js.mdx",
+  //   code: `console.log("I am starting to learn JavaScript.");`,
+  //   next: "variables",
+  //   previous: "/",
+  // },
   {
     id: "variables",
     title: "জাভাস্ক্রিপ্ট চলক(variables) ",
-    content: "variables.mdx",
+    content: "variables",
     // code: ``,
     next: "data-types",
-    previous: "intro-js",
+    previous: "/",
   },
   {
     id: "data-types",
     title: "জাভাস্ক্রিপ্ট ডাটা টাইপ",
-    content: "data-types.mdx",
+    content: "data-types",
     code: `
   // Primitive data types. 
   let name = "binarySearch"; // String
@@ -57,7 +57,7 @@ export const jsCourses: Course[] = [
   {
     id: "operators",
     title: "জাভাস্ক্রিপ্ট অপারেটর",
-    content: "operators.mdx",
+    content: "operators",
     code: `
 let a = 10;
 let b = 5;
@@ -71,22 +71,24 @@ console.log(a % b); // Output: 0
   {
     id: "comments",
     title: "জাভাস্ক্রিপ্ট মন্তব্য (Comments)",
-    content: "comments.mdx",
+    content: "comments",
     next: "conditions",
     previous: "variables",
   },
   {
     id: "conditions",
     title: "জাভাস্ক্রিপ্ট কন্ডিশন",
-    content: "functions.mdx",
-    next: null,
+    content: "functions",
+    next: "functions",
     previous: "variables",
   },
   {
     id: "functions",
     title: "জাভাস্ক্রিপ্ট লুপ (Loops)",
-    content: "functions.mdx",
+    content: "functions",
     next: null,
     previous: "variables",
   },
-];
+].map((item) => {
+  return { ...item, content: item.content + ".mdx" };
+});
