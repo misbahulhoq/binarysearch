@@ -43,7 +43,7 @@ const Header = () => {
               <Logo />
             </div>
             <nav className="hidden lg:block">
-              <ul className="flex space-x-8">
+              {/* <ul className="flex space-x-8">
                 <li>
                   <a href="#" className="transition hover:text-yellow-400">
                     Home
@@ -64,7 +64,7 @@ const Header = () => {
                     Contact
                   </a>
                 </li>
-              </ul>
+              </ul> */}
             </nav>
 
             {pathName !== "/" && <ThemeSwitcher />}
