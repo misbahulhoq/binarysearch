@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import WhyChooseUs from "./WhyChooseUs";
 import HeroSection from "./HeroSection";
 import ComingSoonSection from "./ComingSoonSection";
-import NewsLetter from "./NewsLetter";
+// import NewsLetter from "./NewsLetter";
 import StartNow from "./StartNow";
 
 const WelcomePage = () => {
