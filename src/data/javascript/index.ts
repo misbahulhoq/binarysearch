@@ -79,16 +79,25 @@ console.log(a % b); // Output: 0
     id: "conditions",
     title: "জাভাস্ক্রিপ্ট কন্ডিশন",
     content: "conditions",
-    next: "functions",
-    previous: "variables",
-  },
-  {
-    id: "functions",
-    title: "জাভাস্ক্রিপ্ট লুপ (Loops)",
-    content: "functions",
+    code: `let score = 75;
+
+if (score >= 90) {
+  console.log("আপনার গ্রেড: A");
+} else if (score >= 70) {
+  console.log("আপনার গ্রেড: B");
+} else {
+  console.log("আপনার গ্রেড: C বা এর নিচে");
+}`,
     next: null,
     previous: "variables",
   },
+  // {
+  //   id: "functions",
+  //   title: "জাভাস্ক্রিপ্ট লুপ (Loops)",
+  //   content: "functions",
+  //   next: null,
+  //   previous: "variables",
+  // },
 ].map((item) => {
   return { ...item, content: item.content + ".mdx" };
 });
