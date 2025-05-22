@@ -78,7 +78,7 @@ console.log(a % b); // Output: 0
   {
     id: "conditions",
     title: "জাভাস্ক্রিপ্ট কন্ডিশন",
-    content: "functions",
+    content: "conditions",
     next: "functions",
     previous: "variables",
   },
