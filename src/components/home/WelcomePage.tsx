@@ -35,7 +35,7 @@ const WelcomePage = () => {
             <section className="pb-20">
               <WhyChooseUs />
             </section>
-            <NewsLetter />
+            {/* <NewsLetter /> */}
             {/* Coming Soon Section */}
             <ComingSoonSection />
 
