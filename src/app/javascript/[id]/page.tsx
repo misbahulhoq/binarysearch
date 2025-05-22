@@ -4,6 +4,7 @@ import { jsCourses as lessons } from "@/data/javascript";
 import Link from "next/link";
 import { readFile } from "@/utils/readFile";
 import "../../tutorials.css";
+
 import CodeExecutor from "@/components/javascript/CodeExecutor";
 
 /*************  ✨ Codeium Command ⭐  *************/

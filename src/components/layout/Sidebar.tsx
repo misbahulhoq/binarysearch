@@ -2,6 +2,7 @@
 
 import { useSidebar } from "@/app/Provider";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 interface SidebarProps {
@@ -10,6 +11,7 @@ interface SidebarProps {
 const Sidebar = ({ links }: SidebarProps) => {
   const { isSidebarOpen, closeSidebar } = useSidebar();
   const [deviceWidth, setWidth] = useState<null | number>(null);
+  const pathName = usePathname();
   useEffect(() => {
     const deviceWidth = window.innerWidth;
     setWidth(deviceWidth);
@@ -38,7 +40,7 @@ const Sidebar = ({ links }: SidebarProps) => {
               <li key={index}>
                 <Link
                   href={link.path}
-                  className={`block py-2 text-sm font-medium`}
+                  className={`block py-2 font-medium ${pathName === link.path ? "text-yellow-400" : ""}`}
                   onClick={() => {
                     if (deviceWidth !== null && deviceWidth < 1024) {
                       closeSidebar();

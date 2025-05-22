@@ -88,9 +88,7 @@ const Header = () => {
             )}
 
             {courses.map((course) => (
-              <NavCourseLink key={course.href} props={course}>
-                {}
-              </NavCourseLink>
+              <NavCourseLink key={course.href} props={course}></NavCourseLink>
             ))}
           </div>
         </div>
